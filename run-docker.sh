@@ -8,8 +8,8 @@ if [[ ! -d "$BASE_DIR/auth" ]]; then
 fi
 
 CONTAINER="igotyou"
-IMAGE="htrtech/zphisher:latest"
-IMG_MIRROR="ghcr.io/htr-tech/zphisher:latest"
+IMAGE=""
+IMG_MIRROR=""
 MOUNT_LOCATION=${BASE_DIR}/auth
 check_container=$(docker ps --all --format "{{.Names}}")
 

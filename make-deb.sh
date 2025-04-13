@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Make Deb Package for Zphisher (^.^)
+# Make Deb Package for Igotyou (^.^)
 _PACKAGE=igotyou
 _VERSION=0.1
 _ARCH="all"
@@ -33,7 +33,7 @@ Architecture: ${_ARCH}
 Maintainer: @AnonyHackz
 Depends: ${_depend}
 Homepage: https://github.com/AnonyHackz/Igotyou
-Description: An automated phishing tool. This Tool is made for educational purpose only !
+Description: This tool is intended exclusively for educational purposes and demonstrates automated phishing techniques!
 CONTROL_EOF
 
 cat <<- PRERM_EOF > ./build_env/DEBIAN/prerm
