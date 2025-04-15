@@ -1,0 +1,27 @@
+{"level":"info","time":"2025-04-15T15:29:56Z","message":"Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps"}
+{"level":"info","time":"2025-04-15T15:29:56Z","message":"Requesting new quick Tunnel on trycloudflare.com..."}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"+--------------------------------------------------------------------------------------------+"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"|  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"|  https://cosmetics-troops-interactive-extras.trycloudflare.com                             |"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"+--------------------------------------------------------------------------------------------+"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"Version 2025.4.0 (Checksum df13e7e0a027f648c410b5cc701fbcff028724d0e93209796cdbb79ec38695d4)"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"GOOS: linux, GOVersion: go1.22.10, GoArch: amd64"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"Settings: map[ha-connections:1 logfile:.server/.cld.log protocol:quic url:127.0.0.1:3000]"}
+{"level":"info","autoupdateFreq":86400000,"time":"2025-04-15T15:30:03Z","message":"Autoupdate frequency is set"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"Generated Connector ID: 98b6a8a0-5f89-482f-8898-62f8910d81dd"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"Initial protocol quic"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"ICMP proxy will use 192.168.100.100 as source for IPv4"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"ICMP proxy will use 2001:8f8:1a67:a329:942e:266d:1d6e:86e2 in zone wlan0 as source for IPv6"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"ICMP proxy will use 192.168.100.100 as source for IPv4"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"ICMP proxy will use 2001:8f8:1a67:a329:942e:266d:1d6e:86e2 in zone wlan0 as source for IPv6"}
+{"level":"info","time":"2025-04-15T15:30:03Z","message":"Starting metrics server on 127.0.0.1:20241/metrics"}
+{"level":"info","event":0,"ip":"198.41.192.37","connIndex":0,"time":"2025-04-15T15:30:03Z","message":"Using [CurveID(4588) CurveID(25497) CurveP256] as curve preferences"}
+{"level":"info","event":0,"connection":"289b3b84-461f-48b0-b68e-9213ce593b11","connIndex":0,"location":"dxb01","ip":"198.41.192.37","protocol":"quic","time":"2025-04-15T15:30:04Z","message":"Registered tunnel connection"}
+{"level":"info","time":"2025-04-15T15:30:05Z","message":"Initiating graceful shutdown due to signal interrupt ..."}
+{"level":"error","event":0,"ip":"198.41.192.37","connIndex":0,"error":"Application error 0x0 (remote)","time":"2025-04-15T15:30:05Z","message":"Failed to serve tunnel connection"}
+{"level":"error","event":0,"ip":"198.41.192.37","connIndex":0,"error":"Application error 0x0 (remote)","time":"2025-04-15T15:30:05Z","message":"Serve tunnel error"}
+{"level":"info","event":0,"ip":"198.41.192.37","connIndex":0,"time":"2025-04-15T15:30:05Z","message":"Retrying connection in up to 1s"}
+{"level":"error","time":"2025-04-15T15:30:05Z","message":"no more connections active and exiting"}
+{"level":"info","time":"2025-04-15T15:30:05Z","message":"Tunnel server stopped"}
+{"level":"info","time":"2025-04-15T15:30:05Z","message":"Metrics server stopped"}
