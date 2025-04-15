@@ -210,9 +210,6 @@ cat <<- EOF
 	EOF
 }
 
-## Small Banner
-
-
 ## Dependencies
 dependencies() {
 	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing required packages..."
