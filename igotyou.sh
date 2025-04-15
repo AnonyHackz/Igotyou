@@ -906,7 +906,7 @@ main_menu() {
 ## Main
 kill_pid
 dependencies
-check_status
+#check_status
 install_cloudflared
 install_localxpose
 main_menu
