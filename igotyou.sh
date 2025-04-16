@@ -82,7 +82,7 @@
 
 
 
-__version__="V0.1.1"
+__version__="V0.1.2"
 
 ## DEFAULT HOST & PORT
 HOST='127.0.0.1'
