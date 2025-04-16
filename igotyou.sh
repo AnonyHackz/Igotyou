@@ -154,34 +154,54 @@ kill_pid() {
 }
 
 # Check for a newer release
-check_update(){
-	echo -ne "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Checking for update : "
-	relase_url='https://api.github.com/repos/AnonyHackz/Igotyou/releases/latest'
-	new_version=$(curl -s "${relase_url}" | grep '"tag_name":' | awk -F\" '{print $4}')
-	tarball_url="https://github.com/AnonyHackz/Igotyou/archive/refs/tags/${new_version}.tar.gz"
+check_update() {
+	echo -ne "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Checking for update: "
+	
+	release_url='https://api.github.com/repos/AnonyHackz/Igotyou/releases/latest'
+	new_version=$(curl -s "${release_url}" | grep '"tag_name":' | awk -F\" '{print $4}')
 
-	if [[ $new_version != $__version__ ]]; then
-		echo -ne "${ORANGE}update found\n"${WHITE}
+	echo "${new_version}"
+
+	# If either version is empty, abort
+	if [[ -z "$__version__" || -z "$new_version" ]]; then
+		echo -e "${RED}Could not determine current or latest version.${WHITE}"
+		return
+	fi
+
+	if [[ "$new_version" != "$__version__" ]]; then
+		echo -e "${ORANGE}Update found!${WHITE}"
 		sleep 2
-		echo -ne "\n${GREEN}[${WHITE}+${GREEN}]${ORANGE} Downloading Update..."
+		echo -ne "\n${GREEN}[${WHITE}+${GREEN}]${ORANGE} Downloading update..."
+
+		tarball_url="https://github.com/AnonyHackz/Igotyou/archive/refs/tags/${new_version}.tar.gz"
 		pushd "$HOME" > /dev/null 2>&1
+
 		curl --silent --insecure --fail --retry-connrefused \
-		--retry 3 --retry-delay 2 --location --output ".igotyou.tar.gz" "${tarball_url}"
+			--retry 3 --retry-delay 2 --location --output ".igotyou.tar.gz" "${tarball_url}"
 
 		if [[ -e ".igotyou.tar.gz" ]]; then
 			tar -xf .igotyou.tar.gz -C "$BASE_DIR" --strip-components 1 > /dev/null 2>&1
-			[ $? -ne 0 ] && { echo -e "\n\n${RED}[${WHITE}!${RED}]${RED} Error occured while extracting."; reset_color; exit 1; }
+			if [[ $? -ne 0 ]]; then
+				echo -e "\n\n${RED}[${WHITE}!${RED}] Error occurred while extracting."
+				reset_color
+				exit 1
+			fi
 			rm -f .igotyou.tar.gz
 			popd > /dev/null 2>&1
-			{ sleep 3; clear; banner; }
-			echo -ne "\n${GREEN}[${WHITE}+${GREEN}] Successfully updated! Run igotyou again\n\n"${WHITE}
-			{ reset_color ; exit 1; }
+			sleep 2
+			clear
+			banner
+			echo -e "\n${GREEN}[${WHITE}+${GREEN}] Successfully updated to ${new_version}!"
+			reset_color
+			exit 1
 		else
-			echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured while downloading."
-			{ reset_color; exit 1; }
+			echo -e "\n${RED}[${WHITE}!${RED}] Error occurred while downloading."
+			reset_color
+			exit 1
 		fi
 	else
-		echo -ne "${GREEN}up to date\n${WHITE}" ; sleep .5
+		echo -e "${GREEN}Up to date.${WHITE}"
+		sleep 0.5
 	fi
 }
 
