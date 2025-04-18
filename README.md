@@ -20,19 +20,33 @@
   <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhtr-tech%2Fzphisher&title=Visitors&edge_flat=false"/></a>
 </p>
 
-<p align="center"><b>A beginners friendly, Automated phishing tool with 30+ templates.</b></p>
+<p align="center"><b>An easy-to-use, beginner-friendly automated phishing tool featuring 30+ pre-built templates.</b></p>
 
 ##
 
 <h3><p align="center">Disclaimer</p></h3>
 
-<i>Any actions and or activities related to <b>Zphisher</b> is solely your responsibility. The misuse of this toolkit can result in <b>criminal charges</b> brought against the persons in question. <b>The contributors will not be held responsible</b> in the event any criminal charges be brought against any individuals misusing this toolkit to break the law.
+<i>
+<p>
+All actions and activities related to <b>Igotyou</b> are solely your responsibility. Misuse of this toolkit may lead to <b>criminal charges</b>, and under no circumstances shall the <b>contributors be held liable</b> for any legal consequences resulting from the misuse of this tool.
+</p>
 
-<b>This toolkit contains materials that can be potentially damaging or dangerous for social media</b>. Refer to the laws in your province/country before accessing, using,or in any other way utilizing this in a wrong way.
+<p>
+This toolkit includes features that <b>can be harmful or disruptive to social media platforms</b>. Please consult and comply with your local laws before using, experimenting with, or distributing this software in any manner that could be deemed unethical or illegal.
+</p>
 
-<b>This Tool is made for educational purposes only</b>. Do not attempt to violate the law with anything contained here. <b>If this is your intention, then Get the hell out of here</b>!
+<p>
+<b>This tool is strictly intended for educational and ethical research purposes only.</b> It is designed to demonstrate how phishing attacks can occur in order to raise awareness and help with prevention. 
+</p>
 
-It only demonstrates "how phishing works". <b>You shall not misuse the information to gain unauthorized access to someones social media</b>. However you may try out this at your own risk.</i>
+<p>
+<b>If your intention is to break the law or compromise others' privacy—leave now.</b> Unauthorized access to someone’s account is illegal, unethical, and punishable by law.
+</p>
+
+<p>
+Use responsibly, stay ethical, and always <b>test in a controlled environment or on systems you own or are permitted to test.</b>
+</p>
+</i>
 
 ##
 
@@ -53,16 +67,16 @@ It only demonstrates "how phishing works". <b>You shall not misuse the informati
 
 - Just, Clone this repository -
   ```
-  git clone --depth=1 https://github.com/htr-tech/zphisher.git
+  git clone --depth=1 https://github.com/AnonyHackz/Igotyou.git
   ```
 
-- Now go to cloned directory and run `zphisher.sh` -
+- Now go to cloned directory and run `igotyou.sh` -
   ```
-  $ cd zphisher
-  $ bash zphisher.sh
+  $ cd Igotyou
+  $ bash igotyou.sh
   ```
 
-- On first launch, It'll install the dependencies and that's it. ***Zphisher*** is installed.
+- On first launch, It'll install the dependencies and that's it. ***Igotyou*** is installed.
 
 ##
 
@@ -70,23 +84,23 @@ It only demonstrates "how phishing works". <b>You shall not misuse the informati
 You can easily install zphisher in Termux by using tur-repo
 ```
 $ pkg install tur-repo
-$ pkg install zphisher
-$ zphisher
+$ pkg install igotyou
+$ igotyou
 ```
 ### A Note : 
-***Termux discourages hacking*** .. So never discuss anything related to *zphisher* in any of the termux discussion groups. For more check : [wiki](https://wiki.termux.com/wiki/Hacking)
+***Termux discourages hacking*** .. So never discuss anything related to *Igotyou* in any of the termux discussion groups. For more check : [wiki](https://wiki.termux.com/wiki/Hacking)
 
 ##
 
 <p align="left">
-  <a href="https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/htr-tech/zphisher.git&tutorial=README.md" target="_blank"><img src="https://gstatic.com/cloudssh/images/open-btn.svg"></a>
+  <a href="https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/AnonyHackz/Igotyou.git&tutorial=README.md" target="_blank"><img src="https://gstatic.com/cloudssh/images/open-btn.svg"></a>
 </p>
 
 ##
 
 ### Installation via ".deb" file
 
-- Download `.deb` files from the [**Latest Release**](https://github.com/htr-tech/zphisher/releases/latest)
+- Download `.deb` files from the [**Latest Release**](https://github.com/AnonyHackz/Igotyou/releases/latest)
 - If you are using ***termux*** then download the `*_termux.deb`
 
 - Install the `.deb` file by executing
@@ -106,23 +120,23 @@ $ zphisher
 - Docker Image Mirror:
   - **DockerHub** : 
     ```
-    docker pull htrtech/zphisher
+    docker pull AnonyHackz/Igotyou
     ```
   - **GHCR** : 
     ```
-    docker pull ghcr.io/htr-tech/zphisher:latest
+    docker pull AnonyHackz.io/AnonyHackz/Igotyou:latest
     ```
 
-- By using the wrapper script [**run-docker.sh**](https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh)
+- By using the wrapper script [**run-docker.sh**](https://raw.githubusercontent.com/AnonyHackz/Igotyou/master/run-docker.sh)
 
   ```
-  $ curl -LO https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh
+  $ curl -LO https://raw.githubusercontent.com/AnonyHackz/Igotyou/master/run-docker.sh
   $ bash run-docker.sh
   ```
 - Temporary Container
 
   ```
-  docker run --rm -ti htrtech/zphisher
+  docker run --rm -ti AnonyHackz/Igotyou
   ```
   - Remember to mount the `auth` directory.
 
@@ -131,12 +145,12 @@ $ zphisher
 <details>
   <summary><h3>Dependencies</h3></summary>
 
-<b>Zphisher</b> requires following programs to run properly - 
+<b>Igotyou</b> requires following programs to run properly - 
 - `git`
 - `curl`
 - `php`
 
-> All the dependencies will be installed automatically when you run **Zphisher** for the first time.
+> No setup hassle—**Igotyou** installs all dependencies on first run.
 </details>
 
 <details>
@@ -145,8 +159,6 @@ $ zphisher
 - **Ubuntu**
 - **Debian**
 - **Arch**
-- **Manjaro**
-- **Fedora**
 - **Termux**
 </details>
 
@@ -159,31 +171,9 @@ $ zphisher
 
 ##
 
-### Find Me on:
-<p align="left">
-  <a href="https://tahmidrayat.is-a.dev" target="_blank"><img src="https://img.shields.io/badge/Socials-grey?style=for-the-badge&logo=linktree"></a>
-  <a href="https://github.com/htr-tech" target="_blank"><img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github"></a>
-</p>
 
 
-### *Thanks to all contributors*:
 
-<table>
-  <tr align="center">
-    <td><a href="https://github.com/1RaY-1"><img src="https://avatars.githubusercontent.com/u/78962948?s=100" /><br /><sub><b>1RaY-1</b></sub></a></td>
-    <td><a href="https://github.com/adi1090x"><img src="https://avatars.githubusercontent.com/u/26059688?s=100" /><br /><sub><b>Aditya Shakya</b></sub></a></td>
-    <td><a href="https://github.com/AliMilani"><img src="https://avatars.githubusercontent.com/u/59066012?s=100" /><br /><sub><b>Ali Milani</b></sub></a></td>
-    <td><a href="https://github.com/Meht-evaS"><img src="https://avatars.githubusercontent.com/u/57435273?s=100" /><br /><sub><b>AmnesiA</b></sub></a></td>
-    <td><a href="https://github.com/KasRoudra"><img src="https://avatars.githubusercontent.com/u/78908440?s=100" /><br /><sub><b>KasRoudra</b></sub></a></td>
-   <td><a href="https://github.com/MoisesTapia"><img src="https://avatars.githubusercontent.com/u/28166400?s=100" /><br /><sub><b>Moises Tapia</b></sub></a></td>
-  </tr>
-  <tr align="center">
-   <td><a href="https://github.com/E343IO"><img src="https://avatars.githubusercontent.com/u/74646789?s=100" /><br /><sub><b>Mr.Derek</b></sub></a></td>
-    <td><a href="https://github.com/BDhackers009"><img src="https://avatars.githubusercontent.com/u/67186139?s=100" /><br /><sub><b>Mustakim Ahmed</b></sub></a></td>
-    <td><a href="https://github.com/sepp0"><img src="https://avatars.githubusercontent.com/u/36642137?s=100" /><br /><sub><b>sepp0</b></sub></a></td>
-    <td><a href="https://github.com/TripleHat"><img src="https://avatars.githubusercontent.com/u/68332137?s=100" /><br /><sub><b>TripleHat</b></sub></a></td>
-    <td><a href="https://github.com/Yisus7u7"><img src="https://avatars.githubusercontent.com/u/64093255?s=100" /><br /><sub><b>Yisus7u7</b></sub></a></td>
-  </tr>
-<table>
+
 
 <!-- // -->

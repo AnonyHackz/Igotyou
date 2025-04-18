@@ -682,3 +682,9 @@ User-Agent: Mozilla/5.0 (Linux; Android 14; K) AppleWebKit/537.36 (KHTML, like G
 IP: 86.99.36.228
 User-Agent: Mozilla/5.0 (Linux; Android 14; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.135 Mobile Safari/537.36
 
+IP: 2001:8f8:1a67:a329:802d:c278:8f85:86f8
+User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36
+
+IP: 34.83.203.92
+User-Agent: 
+
