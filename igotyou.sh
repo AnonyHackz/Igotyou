@@ -205,7 +205,7 @@ cat <<- EOF
 		${ORANGE} ██║    ██║   ██║██║   ██║   ██║         ╚██╔╝  ██║   ██║██║   ██║
 		${ORANGE} ██║    ╚██████╔╝╚██████╔╝   ██║          ██║   ╚██████╔╝╚██████╔╝
 		${ORANGE} ╚═╝     ╚═════╝  ╚═════╝    ╚═╝          ╚═╝    ╚═════╝  ╚═════╝ 
-				               ${RED}AnonyHackz       <img src=".github/misc/logo.png">                                                        
+				               ${RED}AnonyHackz                                                         
 		${ORANGE}                      ${RED}Version : ${__version__}
 
 		${GREEN}[${WHITE}-${GREEN}]${CYAN} Code brewed by Vijay Veerappa @ AnonyHackz${WHITE}
