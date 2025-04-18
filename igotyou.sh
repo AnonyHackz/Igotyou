@@ -169,7 +169,7 @@ check_update(){
 		pushd "$HOME" > /dev/null 2>&1
 		curl --silent --insecure --fail --retry-connrefused \
 		--retry 3 --retry-delay 2 --location --output ".igotyou.tar.gz" "${tarball_url}"
-
+		tar -tzf igotyou.tar.gz
 		if [[ -e ".igotyou.tar.gz" ]]; then
 			tar -xf .igotyou.tar.gz -C "$BASE_DIR" --strip-components 1 > /dev/null 2>&1
 			[ $? -ne 0 ] && { echo -e "\n\n${RED}[${WHITE}!${RED}]${RED} Error occured while extracting."; reset_color; exit 1; }
@@ -887,7 +887,7 @@ main_menu() {
 ## Main
 kill_pid
 dependencies
-#check_status
+check_status
 install_cloudflared
 install_localxpose
 main_menu
