@@ -1,7 +1,7 @@
 <!-- IgotYou -->
 
 <p align="center">
-  <img src=".github/misc/logo.png">
+  <img src=".github/misc/Logo.png">
 </p>
 
 <p align="center">
